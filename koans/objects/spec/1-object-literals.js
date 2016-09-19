@@ -1,6 +1,6 @@
 describe('Object literals', function () {
   it('1 - should make sure that tests are setup correctly', function () {
-    expect(1).toBe(__);
+    expect(1).toBe(1);
   });
   it('2 - should understand object literals', function () {
     var samurai = {
@@ -17,6 +17,6 @@ describe('Object literals', function () {
         return 'Hello';
       }
     };
-    expect(typeof samurai).toBe(__);
+    expect(typeof samurai).toBe('object');
   });
 });

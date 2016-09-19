@@ -6,51 +6,51 @@ describe('prototype', function () {
       name: 'default name'
     };
     instance = new Person();
-    expect(instance.name).toBe(__);
-    expect(Person.prototype.isPrototypeOf(instance)).toBe(__);
+    expect(instance.name).toBe('default name');
+    expect(Person.prototype.isPrototypeOf(instance)).toBe(true);
   });
   it('2 - should understand prototype', function () {
     var Person = function () {
     }, instance;
     instance = new Person();
-    Person.prototype = {
+    Person.prototype = {      // changed object reference
       name: 'default name'
     };
-    expect(instance.name).toBe(__);
-    expect(Person.prototype.isPrototypeOf(instance)).toBe(__);
+    expect(instance.name).toBe(undefined);
+    expect(Person.prototype.isPrototypeOf(instance)).toBe(false);
   });
   it('3 - should understand prototype', function () {
     var Person = function () {
     }, firstInstance = new Person(), secondInstance, thirdInstance;
-    expect(firstInstance.name).toBe(__);
+    expect(firstInstance.name).toBe(undefined);
     Person.prototype.name = 'before';
     secondInstance = new Person();
-    expect(firstInstance.name).toBe(__);
-    expect(secondInstance.name).toBe(__);
+    expect(firstInstance.name).toBe('before');
+    expect(secondInstance.name).toBe('before');
     Person.prototype = {
       name: 'after'
     };
     thirdInstance = new Person();
-    expect(firstInstance.name).toBe(__);
-    expect(secondInstance.name).toBe(__);
-    expect(thirdInstance.name).toBe(__);
+    expect(firstInstance.name).toBe('before');
+    expect(secondInstance.name).toBe('before');
+    expect(thirdInstance.name).toBe('after');
     Person.prototype.name = 'even more after';
-    expect(firstInstance.name).toBe(__);
-    expect(secondInstance.name).toBe(__);
-    expect(thirdInstance.name).toBe(__);
+    expect(firstInstance.name).toBe('before');
+    expect(secondInstance.name).toBe('before');
+    expect(thirdInstance.name).toBe('even more after');
 
-    expect(Person.prototype.isPrototypeOf(firstInstance)).toBe(__);
-    expect(Person.prototype.isPrototypeOf(secondInstance)).toBe(__);
-    expect(Person.prototype.isPrototypeOf(thirdInstance)).toBe(__);
+    expect(Person.prototype.isPrototypeOf(firstInstance)).toBe(false);
+    expect(Person.prototype.isPrototypeOf(secondInstance)).toBe(false);
+    expect(Person.prototype.isPrototypeOf(thirdInstance)).toBe(true);
   });
   it('4 - should understand prototype & delete', function () {
     var Person = function () {
     }, instance;
     Person.prototype.name = 'default name';
     instance = new Person();
-    expect(instance.name).toBe(__);
+    expect(instance.name).toBe('default name');
     delete Person.prototype.name;
-    expect(instance.name).toBe(__);
+    expect(instance.name).toBe(undefined);
   });
   it('5 - should understand prototype', function () {
     var Person = function () {
@@ -64,8 +64,9 @@ describe('prototype', function () {
     secondInstance = new Person();
     firstInstance.name = 'new name';
     firstInstance.address.street = 'Kosovska 49';
-    expect(secondInstance.name).toBe(__);
-    expect(secondInstance.address.street).toBe(__);
+    expect(secondInstance.name).toBe('default name');
+    expect(secondInstance.address.street).toBe('Kosovska 49');  // nested object in prototype can be changed via instance
+    //secondInstance.address = ... // this would not affect the prototype
   });
   it('6 - should understand prototypes - angularjs scopes (Scope.prototype.$new)', function () {
     var parentScope = {
@@ -82,15 +83,15 @@ describe('prototype', function () {
         return new ChildScopeConstructor();
       },
       childScope = createChildScope(parentScope);
-    expect(parentScope.name).toBe(__);
-    expect(childScope.name).toBe(__);
+    expect(parentScope.name).toBe('default name');
+    expect(childScope.name).toBe('default name');
     childScope.name = 'new name';
-    expect(parentScope.name).toBe(__);
-    expect(childScope.name).toBe(__);
-    expect(parentScope.address.street).toBe(__);
-    expect(childScope.address.street).toBe(__);
+    expect(parentScope.name).toBe('default name');
+    expect(childScope.name).toBe('new name');
+    expect(parentScope.address.street).toBe('Kosovska 51');
+    expect(childScope.address.street).toBe('Kosovska 51');
     childScope.address.street = 'Kosovska 49';
-    expect(parentScope.address.street).toBe(__);
-    expect(childScope.address.street).toBe(__);
+    expect(parentScope.address.street).toBe('Kosovska 49');
+    expect(childScope.address.street).toBe('Kosovska 49');
   });
 });

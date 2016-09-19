@@ -7,7 +7,7 @@ describe('Enumerating properties', function () {
         street: 'Samurai Way',
         postcode: '18+'
       },
-      toString: function () {
+      toString: function () {       // if overriden becomes own property
         return 'I\'m a Samurai!';
       }
     }, name, properties = 0, ownProperties = 0, enumerableProperties = 0;
@@ -20,8 +20,8 @@ describe('Enumerating properties', function () {
         enumerableProperties += 1;
       }
     }
-    expect(properties).toBe(__);
-    expect(ownProperties).toBe(__);
-    expect(enumerableProperties).toBe(__);
+    expect(properties).toBe(4);
+    expect(ownProperties).toBe(4);
+    expect(enumerableProperties).toBe(4);
   });
 });
