@@ -29,11 +29,11 @@ playerService.getPlayer(1)
   .then(player => console.log('Player', player), reason => console.log(reason));
 leaderboardService.getLeaderboard()
   .then(leaderboard => console.log('Leaderboard', leaderboard), reason => console.log(reason));
-betterLeaderboardService.getLeaderboard()
-  .then(function(leaderboard) {
-    var nameArray = [];
-    for(var i=0; i<leaderboard.length; i++) {
-      playerService.getPlayer(leaderboard[i].id).then(player => nameArray.push(player.name));
-    }
-    console.log(nameArray);
-  }, reason => console.log(reason));
+
+// best solution
+var myFunction = function () {
+  return betterLeaderboardService.getLeaderboard()
+  .then(leaderboard => Promise.all(leaderboard.map(item => playerService.getPlayer(item.id))),
+    reason => { console.log(reason); return Promise.reject(reason); }); // this will be logged as failure, without reject it's a pass
+}
+myFunction().then(result => console.log(result.map(item => item.name)), reason => console.log(reason));

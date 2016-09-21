@@ -18,12 +18,12 @@ describe('Promises', () => {
   it('should understand the toHaveBeenCalledWith matcher', function () {
     successCallback('Here is the result');
 
-    expect(__).toHaveBeenCalledWith(___);
-    expect(__).not.toHaveBeenCalled();
+    expect(successCallback).toHaveBeenCalledWith('Here is the result');
+    expect(failureCallback).not.toHaveBeenCalled();
   });
   it('should understand why one should not write tests like this (put the expectation inside then)', function () {
     promise.then(function (result) {
-      expect(result).toBe('Why is this not failing???');
+      //expect(result).toBe('Why is this not failing???');
     });
 
     resolve('Result');
@@ -34,8 +34,8 @@ describe('Promises', () => {
     resolve('Result');
 
     setTimeout(() => {
-      expect(__).toHaveBeenCalledWith(___);
-      expect(__).not.toHaveBeenCalled();
+      expect(successCallback).toHaveBeenCalledWith('Result');
+      expect(failureCallback).not.toHaveBeenCalled();
       done();
     }, 1);
   });
@@ -45,8 +45,8 @@ describe('Promises', () => {
     promise.then(successCallback, failureCallback);
 
     setTimeout(() => {
-      expect(__).toHaveBeenCalledWith(___);
-      expect(__).not.toHaveBeenCalled();
+      expect(successCallback).toHaveBeenCalledWith('Result');
+      expect(failureCallback).not.toHaveBeenCalled();
       done();
     }, 1);
   });
@@ -56,8 +56,8 @@ describe('Promises', () => {
     reject('Reason');
 
     setTimeout(() => {
-      expect(__).toHaveBeenCalledWith(___);
-      expect(__).not.toHaveBeenCalled();
+      expect(failureCallback).toHaveBeenCalledWith('Reason');
+      expect(successCallback).not.toHaveBeenCalled();
       done();
     }, 1);
   });
@@ -67,8 +67,8 @@ describe('Promises', () => {
     reject('Reason');
 
     setTimeout(() => {
-      expect(__).toHaveBeenCalledWith(___);
-      expect(__).not.toHaveBeenCalled();
+      expect(failureCallback).toHaveBeenCalledWith('Reason');
+      expect(successCallback).not.toHaveBeenCalled();
       done();
     }, 1);
   });
@@ -91,12 +91,12 @@ describe('Promises', () => {
         }, 1);
       };
     });
-    it('should understand Promise.when', function (done) {
+    it('should understand Promise.then', function (done) {
       successAsyncAction('Result').then(successCallback, failureCallback);
 
       verify(() => {
-        expect(__).toHaveBeenCalledWith(___);
-        expect(__).not.toHaveBeenCalled();
+        expect(successCallback).toHaveBeenCalledWith('Result');
+        expect(failureCallback).not.toHaveBeenCalled();
       }, done);
     });
 
@@ -104,8 +104,8 @@ describe('Promises', () => {
       failAsyncAction('Reason').then(successCallback, failureCallback);
 
       verify(() => {
-        expect(__).toHaveBeenCalledWith(___);
-        expect(__).not.toHaveBeenCalled();
+        expect(failureCallback).toHaveBeenCalledWith('Reason');
+        expect(successCallback).not.toHaveBeenCalled();
       }, done);
     });
 
@@ -117,8 +117,8 @@ describe('Promises', () => {
         .then(successCallback, failureCallback);
 
         verify(() => {
-          expect(__).toHaveBeenCalledWith(___);
-          expect(__).not.toHaveBeenCalled();
+          expect(successCallback).toHaveBeenCalledWith('Result Little extra');
+          expect(failureCallback).not.toHaveBeenCalled();
         }, done);
     });
 
@@ -130,8 +130,8 @@ describe('Promises', () => {
         .then(successCallback, failureCallback);
 
         verify(() => {
-          expect(__).toHaveBeenCalledWith(___);
-          expect(__).not.toHaveBeenCalled();
+          expect(successCallback).toHaveBeenCalledWith('Result Little more');
+          expect(failureCallback).not.toHaveBeenCalled();
         }, done);
     });
 
@@ -143,8 +143,8 @@ describe('Promises', () => {
         .then(successCallback, failureCallback);
 
         verify(() => {
-          expect(__).toHaveBeenCalledWith(___);
-          expect(__).not.toHaveBeenCalled();
+          expect(failureCallback).toHaveBeenCalledWith('Result Little more');
+          expect(successCallback).not.toHaveBeenCalled();
         }, done);
     });
 
@@ -155,8 +155,8 @@ describe('Promises', () => {
         .then(successCallback, failureCallback);
 
         verify(() => {
-          expect(__).toHaveBeenCalledWith(___);
-          expect(__).not.toHaveBeenCalled();
+          expect(successCallback).toHaveBeenCalledWith(undefined);
+          expect(failureCallback).not.toHaveBeenCalled();
         }, done);
     });
 
@@ -165,8 +165,8 @@ describe('Promises', () => {
         .then(successCallback, failureCallback);
 
         verify(() => {
-          expect(__).toHaveBeenCalledWith(___);
-          expect(__).not.toHaveBeenCalled();
+          expect(successCallback).toHaveBeenCalledWith(['Result 1', 'Result 2', 'Result 3']);
+          expect(failureCallback).not.toHaveBeenCalled();
         }, done);
     });
 
@@ -175,21 +175,21 @@ describe('Promises', () => {
         .then(successCallback, failureCallback);
 
         verify(() => {
-          expect(__).toHaveBeenCalledWith(___);
-          expect(__).not.toHaveBeenCalled();
+          expect(failureCallback).toHaveBeenCalledWith('Reason 2');
+          expect(successCallback).not.toHaveBeenCalled();
         }, done);
     });
 
     it('should understand Promise.all 3', function (done) {
       Promise.all([1, 2, 3].map(successAsyncAction))
         .then(function (result) {
-          return Math.max(...result);
+          return Math.max(...result); // ... converts array into arguments
         })
         .then(successCallback, failureCallback);
 
         verify(() => {
-          expect(__).toHaveBeenCalledWith(___);
-          expect(__).not.toHaveBeenCalled();
+          expect(successCallback).toHaveBeenCalledWith(3);
+          expect(failureCallback).not.toHaveBeenCalled();
         }, done);
     });
 
@@ -207,8 +207,8 @@ describe('Promises', () => {
         .then(successCallback, failureCallback);
 
         verify(() => {
-          expect(__).toHaveBeenCalledWith(___);
-          expect(__).not.toHaveBeenCalled();
+          expect(successCallback).toHaveBeenCalledWith(300);
+          expect(failureCallback).not.toHaveBeenCalled();
         }, done);
     });
   })
