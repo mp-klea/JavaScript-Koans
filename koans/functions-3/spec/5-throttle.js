@@ -3,8 +3,45 @@
  * throttle jQuery.ajax
  * throttling + prioritization
  */
+
+var SAMURAIPRINCIPLE = {};
+
+SAMURAIPRINCIPLE.throttle = function(fn, tms) {
+  var timeoutRunning;
+  var lastPrice;
+  return function (param) {
+    if(!timeoutRunning) {
+      lastPrice = null;
+      timeoutRunning = true;
+      setTimeout(function() {
+        timeoutRunning = false;
+        if(lastPrice) { 
+          fn(lastPrice);
+        }
+      }, tms);
+      fn(param);
+    }
+    else {
+      lastPrice = param;
+    }
+  }
+  // if(!SAMURAIPRINCIPLE.timeoutRunning) {
+  //   setTimeout(function() {
+  //     SAMURAIPRINCIPLE.timeoutRunning = false;
+  //   }, tms);
+  //   return function(arg) {
+  //     SAMURAIPRINCIPLE.timeoutRunning = true;
+  //     return fn(arg);
+  //   };
+  // }
+  // else {
+  //   return function() {};
+  // }
+}
+
 describe('Throttle', function () {
   var priceOnScreen, showPrice, throttledShowPrice;
+
   beforeEach(function () {
     priceOnScreen = undefined;
     showPrice = function (currentPrice) {
