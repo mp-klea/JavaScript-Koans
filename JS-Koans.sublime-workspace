@@ -1,0 +1,422 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pr",
+				"priority"
+			],
+			[
+				"e",
+				"eventType"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"is",
+				"isCellAlive"
+			],
+			[
+				"colo",
+				"colorLookup"
+			],
+			[
+				"sa",
+				"Samurai"
+			],
+			[
+				"samurai",
+				"samurai2"
+			],
+			[
+				"unde",
+				"undefined"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 127.0,
+		"last_filter": "Package Control: ins",
+		"selected_items":
+		[
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 485.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"npm install -g jshint",
+			"Package Control: Install Package",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) ",
+			"Package Control\\",
+			"Package Control/",
+			"Package Control",
+			"cd Install Package",
+			"install",
+			"Install Package",
+			"Package Control Install Package",
+			"Package Control: Install Package"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/Klea/git/JavaScript-Koans/koans"
+	],
+	"file_history":
+	[
+		"/Users/Klea/Documents/workspace/KK Playground/src/aura/MyContactList/MyContactListController.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/promises-2/spec/promises.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/promises-1/main.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/promises-1/data/player/1.json",
+		"/Users/Klea/git/JavaScript-Koans/koans/observable/src/eventDispatcher.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/observable/SpecRunner.html",
+		"/Users/Klea/git/JavaScript-Koans/koans/observable/spec/game-of-life.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/observable/src/game-of-life.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/dont-peek/observable/eventDispatcher.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/observable/spec/eventDispatcherTest08.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/observable/spec/eventDispatcherTest06.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/observable/spec/eventDispatcherTest05.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/observable/spec/eventDispatcherTest04.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/observable/spec/eventDispatcherTest03.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/observable/spec/eventDispatcherTest02.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/observable/spec/eventDispatcherTest01.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/oop/src/game-of-life.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/functions-3/spec/5-throttle.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/oop/spec/game-of-life.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/dont-peek/oop/game-of-life.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/functions-2/spec/3-method-as-callback.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/functions-2/spec/2-module.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/arrays/spec/1-basics.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/functions-2/spec/1-closure.js",
+		"/Users/Klea/Library/Application Support/Sublime Text 3/Packages/JSHint Gutter/.jshintrc",
+		"/Users/Klea/git/JavaScript-Koans/koans/arrays/spec/5-methods-generic.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/arrays/spec/4-methods-iteration.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/arrays/spec/3-methods-accessor.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/arrays/spec/2-methods-mutator.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/functions-1/spec/3-invocation-patterns.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/functions-1/spec/4-return.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/functions-1/spec/5-prototype.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/functions-1/spec/1-function-expression-function-declaration.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/functions-1/spec/2-parameters.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/objects/spec/5-delete.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/objects/spec/9-game-of-life.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/objects/src/9-game-of-life.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/objects/spec/6-es5.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/objects/spec/3-enumerating-properties.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/objects/spec/4-updating-property-value.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/objects/spec/2-retrieving-property-value.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/objects/spec/1-object-literals.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/objects/SpecRunner.html",
+		"/Users/Klea/git/JavaScript-Koans/koans/jasmine/SpecRunner.html",
+		"/Users/Klea/git/JavaScript-Koans/koans/jasmine/spec/1-game-of-life.js",
+		"/Users/Klea/git/JavaScript-Koans/koans/jasmine/src/1-game-of-life.js",
+		"/Users/Klea/Library/Application Support/Sublime Text 3/Packages/JSHint Gutter/JSHint.sublime-settings",
+		"/Users/Klea/Documents/workspace/britisheventing/src/classes/PersonWSMock.cls",
+		"/Users/Klea/Downloads/apex-07L4E000002XjcsUAC.log",
+		"/Users/Klea/Google Drive/KK 501/501 DEV/src/pages/DonationWizard.page",
+		"/Users/Klea/Google Drive/Project Notes/Canonical/CaseStackedBarController.js",
+		"/Users/Klea/Google Drive/Project Notes/Canonical/CasePieController.js",
+		"/Users/Klea/Google Drive/Project Notes/Canonical/CaseBarController.js",
+		"/Applications/eclipse/Eclipse.app/Contents/MacOS/eclipse.ini",
+		"/Users/Klea/Desktop/login_u1.crt",
+		"/Users/Klea/Documents/workspace/canonical/src/package.xml",
+		"/Users/Klea/.Trash/xyz.txt",
+		"/Users/Klea/Desktop/login.staging.ubuntu.com-saml-cert",
+		"/Users/Klea/Desktop/login_staging_ubuntu_com-saml-cert.cer",
+		"/Users/Klea/Desktop/login_staging_ubuntu_com-saml-cert.crt",
+		"/Users/Klea/Downloads/SAMLSP-00D7E0000008isH.xml",
+		"/Users/Klea/Google Drive/Project Notes/Canonical/VerizonEmailExample.html",
+		"/Users/Klea/Google Drive/Project Notes/Canonical/emailSource.html",
+		"/Users/Klea/Google Drive/Project Notes/Canonical/web2case.html",
+		"/Users/Klea/Documents/workspace/canonical/src/classes/ReportUtil.cls",
+		"/Users/Klea/Google Drive/Project Notes/Canonical/d3_old.js",
+		"/Users/Klea/Google Drive/Project Notes/Canonical/nv.d3.css",
+		"/Users/Klea/Google Drive/Project Notes/Canonical/nv.d3.min.js",
+		"/Users/Klea/Google Drive/Project Notes/Canonical/googleChartLoader.js",
+		"/Users/Klea/Desktop/kimbledata",
+		"/Users/Klea/Documents/salesforce_ant_36.0/sample/build.xml",
+		"/Users/Klea/Documents/workspace/sfdc-boilerplate/circle.yml",
+		"/Users/Klea/Google Drive/Project Notes/Chart.js",
+		"/Users/Klea/Documents/workspace/CCS_Dev_Local/CCS Dev Local/src/classes/UnitTestDataFactory.cls",
+		"/Users/Klea/Documents/tumblr_css_1.html",
+		"/Users/Klea/Google Drive/KK 501/501 DEV/src/classes/BidTriggerHandler.cls",
+		"/Users/Klea/Google Drive/KK 501/Bid_trigger.txt",
+		"/Applications/eclipse/configuration/config.ini",
+		"/Users/Klea/Google Drive/Project Notes/CCS/UserFields.csv",
+		"/Users/Klea/Google Drive/Project Notes/CCS/SupplierFrameworkLot.csv",
+		"/Users/Klea/Google Drive/Project Notes/CCS/ProcurementSubCategoryFields.csv",
+		"/Users/Klea/Google Drive/Project Notes/CCS/ProcurementStagesFields.csv",
+		"/Users/Klea/Google Drive/Project Notes/CCS/OpsWorkflowTemplatesFields.csv",
+		"/Users/Klea/Google Drive/Project Notes/CCS/UserForCSSCategoryFields.csv",
+		"/Users/Klea/Google Drive/Project Notes/CCS/OpsWorkflowStagesFields.csv",
+		"/Users/Klea/Google Drive/Project Notes/CCS/MasterFrameworkFields.csv",
+		"/Users/Klea/Google Drive/Project Notes/CCS/MasterFrameworkLot.csv",
+		"/Users/Klea/Google Drive/Project Notes/CCS/MasterFrameworkLotContact.csv",
+		"/Users/Klea/Google Drive/Project Notes/CCS/MasterFrameworkLotCodeFields.csv",
+		"/Users/Klea/Google Drive/Project Notes/CCS/ExceptionLogFields.csv",
+		"/Users/Klea/Google Drive/Project Notes/CCS/ContractFinderIntegrationFields.csv",
+		"/Users/Klea/Google Drive/Project Notes/CCS/CategoryFields.csv",
+		"/Users/Klea/Google Drive/Project Notes/CCS/CaseSupplier.csv",
+		"/Users/Klea/Google Drive/Project Notes/CCS/CaseFields.csv",
+		"/Users/Klea/Google Drive/Project Notes/CCS/CSSContractFields.csv",
+		"/Users/Klea/Google Drive/Project Notes/CCS/CSSContractAmendmentFields.csv",
+		"/Users/Klea/Google Drive/Project Notes/CCS/CASSubCategoryforContractFields.csv",
+		"/Users/Klea/Google Drive/Project Notes/CCS/SchemaExporter.class",
+		"/Users/Klea/Google Drive/Project Notes/CCS/BusinessTeamFields.csv",
+		"/Users/Klea/Google Drive/Project Notes/CCS/EventFields.csv",
+		"/Users/Klea/Google Drive/Project Notes/CCS/TaskFields.csv",
+		"/Users/Klea/Google Drive/Project Notes/CCS/package_20160315.xml",
+		"/Users/Klea/Google Drive/Project Notes/CCS/ContactFields.csv",
+		"/Users/Klea/Google Drive/Project Notes/CCS/AccountFields.csv",
+		"/Users/Klea/Google Drive/Project Notes/CCS/ObjectDescribe.csv",
+		"/Users/Klea/Google Drive/Project Notes/CCS/Stages Discussion.txt",
+		"/Users/Klea/Google Drive/Project Notes/CCS/Stages Discussion.txty",
+		"/Users/Klea/Google Drive/Project Notes/CCS/TimeUtilTest.cls",
+		"/Users/Klea/Google Drive/Project Notes/CCS/TimeUtil.cls",
+		"/Users/Klea/Documents/Winter 16.txt",
+		"/Users/Klea/Documents/workspace/MP Peopledev/src/classes/ApiUrlclass.cls",
+		"/Users/Klea/Documents/TalendTestData.csv",
+		"/Users/Klea/Documents/workspace/CI-practice-repo/src/classes/ReportRunnerController.cls",
+		"/Users/Klea/Documents/workspace/CI-practice-repo/src/classes/ReportHelper.cls",
+		"/Users/Klea/Documents/workspace/LowCost/src/classes/TestUtils.cls",
+		"/Users/Klea/Google Drive/Project Notes/UPP/D3/SVG_Chart.html",
+		"/Users/Klea/Google Drive/Project Notes/UPP/D3/BarChart.html",
+		"/Users/Klea/Google Drive/Project Notes/UPP/D3/BarChart.js",
+		"/Users/Klea/Google Drive/Project Notes/UPP/D3/BarChart.css",
+		"/Users/Klea/Documents/Project Files/UPP/My_Opportunities_by_Type metadata.txt",
+		"/Users/Klea/Documents/Project Files/UPP/My_Opportunities_by_Type report.txt",
+		"/Users/Klea/Documents/Project Files/UPP/My_Opportunities_by_Type JSON describe.txt",
+		"/Users/Klea/Documents/Project Files/FutureLink/FutureLink 12:30 15:01:2016",
+		"/Users/Klea/Documents/Project Files/Low Cost/REST_API_commands",
+		"/Users/Klea/Documents/Project Files/Low Cost/KAV_Rest_extract",
+		"/Users/Klea/Documents/Project Files/Low Cost/:Users:Klea:Documents:Project Files:Low Cost:API_commands",
+		"/Users/Klea/Documents/Project Files/Low Cost/Queue2CaseRTMapping.csv",
+		"/Users/Klea/Documents/workspace/LowCost/src/classes/CaseTriggerHandlerTest.cls"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"con",
+			"addEventListener",
+			"]);\n",
+			");\n",
+			"()\n",
+			"\t\t\t\n",
+			"parseInt",
+			");\n",
+			"\t\n",
+			"select",
+			"\\n",
+			"!",
+			"!T",
+			"table",
+			"    ",
+			"block:text",
+			"block:test",
+			"text",
+			"title",
+			"opacity",
+			"color",
+			"#",
+			"grey",
+			"52,",
+			"343434",
+			"h2",
+			".title",
+			"title {",
+			"title{",
+			"title",
+			"purple",
+			"batman",
+			"ratingsList",
+			"=3D",
+			"=C2=A0",
+			"=\\n",
+			"\\n",
+			"}",
+			"{!",
+			"{",
+			"X360__c",
+			"opportunity",
+			"account",
+			"detail",
+			"scope",
+			"Case trigger event",
+			"Fire On Creation",
+			"createOwnershipLogs",
+			" ",
+			"createOwnershipLogs",
+			"* *",
+			"--",
+			"3D\""
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"",
+			"\t",
+			"ratingsMap",
+			"=",
+			"",
+			"\\n",
+			" = 'Medium';",
+			"",
+			"fb360",
+			"_",
+			"*",
+			"* *",
+			"\"",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.MavensMate-OutputPanel":
+	{
+		"height": 43.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "JS-Koans.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 165.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
